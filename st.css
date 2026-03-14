@@ -1,0 +1,51 @@
+/* Header container */
+#head{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    max-width: 1600px;
+    margin:auto;
+    padding: 10px 2%;
+}
+
+/* Images inside header */
+#head img{
+    width: 25px;
+    height: 25px;
+}
+#head menu{
+    cursor: pointer
+}
+
+/* Logo size */
+#logo img{
+    width: 90px;
+    height: 30px;
+}
+
+/* Search bar */
+#Searchbar input{
+    width: 300px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+/* Location section */
+#location{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Account section */
+#Account{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Cart icon */
+#cart img{
+    width: 30px;
+}
