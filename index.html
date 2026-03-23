@@ -7,32 +7,51 @@
     <link rel="stylesheet" href="st.css">
 </head>
 <body>
-    <header id = "head">
-        <div id="menuButton">
-            <img src="Header/Menu/menu.png" alt="menu">
-        </div>
-        <div id="logo">
-            <img src="Header/Logo/metro.png" alt="metro">
-        </div>
-        <div id="Searchbar">
-            <input type="text" placeholder="Search">
-        </div>
-        <div id="location">
-            <img src="Header/Location/locationIcon.png" alt="loction">
-            <p>Deliver to:</p>
-            <p>Select Location</p>
-        </div>
-        <div id="Account">
-            <img src="Header/Account/ProfileIcon.png" alt="ProfileIcon">
-            <p>Login</p>
-            <p>Account</p>
-        </div>
-        <div id="cart">
-            <img src="Header/Cart/cart-outline.png" alt="cart">
-        </div>
-        <hr>
+    <header id = "headerContainer">
+        <nav id="head">
+            <div id="left">
+                <div id="menuButton">
+                    <img src="Header/Menu/menu.png" alt="menu">
+                </div>
+                <div id="logo">
+                    <img src="Header/Logo/metro.png" alt="metro">
+                </div>
+            </div>
+            <div id="Searchbar">
+                <div class="search-box">
+                    <input type="text" placeholder="Search products">
+                </div>
+            </div>
+            <div id="right">
+                <div id="location">
+                    <div id="location_img">
+                        <img src="Header/Location/locationIcon.png" alt="loction">
+                    </div>
+                    <div class="header-text">
+                        <p >Deliver to:</p>
+                        <p >Select Location</p>
+                    </div>
+                </div>
+                <div id="Account">
+                    <img src="Header/Account/ProfileIcon.png" alt="ProfileIcon">
+                    <div class="header-text">
+                        <p>Login</p>
+                        <p>Account</p>
+                    </div>
+                </div>
+                <div id="cart">
+                    <img src="Header/Cart/cart-outline.png" alt="cart">
+                </div>
+            </div>
+        </nav>
     </header>
-    <Section id ="banner" ></Section>
+    <Section id ="banner" >
+        <div class="slides">
+            <img src="slide1.jpg" alt="Slide 1">
+            <img src="slide2.jpg" alt="Slide 2">
+            <img src="slide3.jpg" alt="Slide 3">
+        </div>
+    </Section>
     <Section id ="sales"> </Section>
     <Section id ="dowmloadLinks"></Section>
     <Section class ="items"></Section>
