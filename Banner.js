@@ -1,12 +1,12 @@
-let currentIndex = 0;
-const slides = document.querySelector('.slides');
-const totalSlides = slides.children.length;
+const slides = document.querySelectorAll('.slide');
+let index = 0;
 
-function nextSlide() {
-    currentIndex++;
-    if (currentIndex >= totalSlides) currentIndex = 0;
-    slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+function showNextSlide() {
+    slides[index].classList.remove('active');
+
+    index = (index + 1) % slides.length;
+
+    slides[index].classList.add('active');
 }
 
-// Change slide every 3 seconds
-setInterval(nextSlide, 3000);
+setInterval(showNextSlide, 3000); // 3 seconds
