@@ -1,3 +1,4 @@
+/*================Banner or Carousel================*/
 #banner {
     width: 100%;
     aspect-ratio: 4/1;
@@ -21,4 +22,72 @@
 /* Visible one */
 .slide.active {
     opacity: 1;
+}
+
+/* DOT CONTAINER */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* EACH DOT */
+.dot {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.dot.active {
+    background: white;
+    border-color: white;
+}
+
+/*================Sales Section================*/
+#sales{
+    max-width: 1600px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 10px;
+
+
+}
+.saleItems img{
+    max-width: 258.3px;
+    width:100%;
+    aspect-ratio: 2/1;
+}
+/*================Download Links Section================*/
+#dowmloadLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    column-gap: 40px;    
+}
+
+#dowmloadLinks p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 18.12px;
+    text-align: center;
+    color: #333;
+
+}
+#downloadLinksImg{
+    display: flex;
+    gap: 15px;
+}
+#downloadLinksImg img{
+    height: 60px;
+    width: 164px;
 }
