@@ -1,0 +1,440 @@
+/*================Banner or Carousel================*/
+#banner {
+    cursor:pointer;
+    width: 100%;
+    aspect-ratio: 4/1;
+    max-width: 1600px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* All images stacked */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Visible one */
+.slide.active {
+    opacity: 1;
+}
+
+/* DOT CONTAINER */
+.dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+/* EACH DOT */
+.dot {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #aaa;
+    border-radius: 50%;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+/* ACTIVE DOT */
+.dot.active {
+    background: white;
+    border-color: white;
+}
+
+/*================Sales Section================*/
+#sales{
+    max-width: 1600px;
+    margin: 15px auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+
+
+}
+.saleItems img{
+    max-width: 258.3px;
+    width:100%;
+    aspect-ratio: 2/1;
+    cursor:pointer;
+}
+@media screen and (max-width:786px) {
+    #sales{
+        grid-template-columns:repeat(3, 1fr);
+        
+    }
+      
+}
+/*================Download Links Section================*/
+#dowmloadLinks{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    column-gap: 40px;    
+}
+
+#dowmloadLinks p{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 18.12px;
+    text-align: center;
+    color: #333;
+
+}
+#downloadLinksImg{
+    display: flex;
+    gap: 15px;
+    cursor:pointer;
+}
+#downloadLinksImg img{
+    height: 60px;
+    width: 164px;
+}
+
+@media screen and (max-width: 786px) {
+    #dowmloadLinks {
+        display: none;
+    }
+    
+}
+/*================items  Section================*/
+
+.items{
+    margin: 20px auto;
+    max-width: 1600px;
+    padding: 0 15px;
+}
+.itemsGrid{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 25px;
+}
+.advertisement{
+    grid-row: span 2;   /* takes 2 rows */
+    grid-column: span 1;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    aspect-ratio: auto;
+    width: 100%;
+}
+
+.advertisement img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.product{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    overflow: hidden;
+    cursor: pointer;
+   
+}
+
+.productInfo{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: 1px solid #e9e9e9;
+    border-radius: 20px 20px 0px 0px;
+    position: relative;
+
+}
+
+.heart{
+    display: flex;
+    justify-content: flex-end;
+}
+.heart img{
+    padding-right: 10px;
+    padding-top: 15px;
+    width: 17px;
+    aspect-ratio: 1/1;
+}
+.productPic{
+    max-height: 140px;
+    aspect-ratio: 1/1;   /* 🔥 fixed image box */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.productPic img{
+    max-height: 157px;
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+.productDescription{
+    text-align: left;
+    padding-left: 10px ;
+    height: 100%;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between ;
+}
+
+.productDescription p{
+    padding-top: 0;
+    font-size: 15px;
+    font-weight: bolder;
+    width: 100%;
+    max-width: 250px;
+    color: #121212
+}
+
+.productPrice{
+    display: flex;
+    align-content: baseline;
+    max-width: 55px;
+}
+.productPrice p{
+    margin-top: auto;
+    color: #084d8c;
+    font-weight: bold;
+}
+.productPrice s{
+    font-size: 12px;
+    color: gray;
+}
+
+.addToCartBtn{
+    width: 100%;
+    height: 100%;
+    max-height: 37px;
+    
+    border: 1px solid #084d8c;
+    background-color: transparent;
+
+    cursor: pointer;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.addToCartBtn img{
+    width: 30px;
+}
+.seeMore{
+    font-weight: 400;
+    color: #084dBc;
+    font-size: 20px;
+    line-height: 25.88px;
+    margin:10px auto 0;
+    text-decoration: underline;
+    cursor: pointer;
+    text-underline-offset: 5px;
+    text-align: center;
+    display: block;
+    width: fit-content;
+}
+.MobileAd{
+    display: none;
+    grid-row: span 1;
+    grid-column: span 2;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+}
+.MobileAd img{
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    max-height: 100%;
+    aspect-ratio: auto 0/0;
+}
+@media screen and (max-width:1300px){
+    .itemsGrid{
+        grid-template-columns: repeat(4,1fr);
+    }
+    
+    .itemsGrid > *:nth-last-child(-n+2) {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .itemsGrid{
+        grid-template-columns: repeat(3,1fr);
+    }
+   
+}
+
+@media screen and (max-width:786px) {
+    .itemsGrid > *:nth-last-child(-n+4) {
+        display: none;
+    }  
+    .productPic img{
+        max-width: 112px;
+    }
+}
+@media screen and (max-width:575px) {
+    .itemsGrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .advertisement{
+        display: none;
+    }
+    .MobileAd{
+        display: block;
+        
+    }
+}
+
+/*================Popular Categories  Section================*/
+
+.headingText{
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-transform: uppercase;
+    text-underline-offset: 5px;
+    text-align: center;
+    margin: 10px 0;
+    color: #084dBc;
+    display: block;
+}
+#popularCategoriesGrid{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.popularCategoriesGridImage img{
+    color: transparent;
+    width: 100%;
+    border-radius: 12px 12px 12px 0px;
+    border: none;
+    max-height: 128px;
+    aspect-ratio: auto;
+    cursor: pointer;
+}
+@media screen and (max-width: 786px) {
+    #popularCategoriesGrid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/*================Random Items  Section================*/
+#randomItemsGrid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+    padding: 20px auto;
+    max-width: 1600px;
+    margin:0 auto;
+  
+}
+.randomItemsGridImage{
+    display: block;
+    max-width: 100%;
+    cursor: pointer;
+    border-radius: 26px 26px 26px 0px;
+    border: none;
+    min-width: 145px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.randomItemsGridImage img{
+    color: transparent;
+    height: 100%;
+    width: 100%;
+    border-radius: 26px 26px 26px 0px;
+    max-height: 100%;
+    border: none;
+}
+@media screen and (max-width: 575px) {
+    #randomItemsGrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+/*================Explore Button================*/
+#exploreBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    unicode-bidi: isolate;
+    margin-top: 10px;
+}
+#exploreBtn button{
+    height: 46px;
+    background-color:rgb(8, 77, 140);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-weight: 200;
+    cursor: pointer;
+}
+/*================Subscribe Section================*/
+.subscribe{
+    max-width: 1600px;
+    margin: 0 auto;
+    text-align: center;
+}
+.subscribe p:nth-child(2){
+    font-size: 24px;
+    font-weight: 400;
+    margin: 0 0 20px;
+    color: #333;
+    line-height: 18.12px;
+
+}
+.emailSubscribe{
+    display: flex;
+    max-width: 1600px;
+    margin:0 auto;
+    justify-content: center;
+    gap: 20px;
+
+}
+.email{
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    padding:  0 0 0 13px;
+    height: 40px;
+    max-width: 524px;
+    width: 100%;
+    border: 1px solid #e9e9e9;
+    border-radius: 6px;
+    transition: border-color .3s ease;
+    overflow: clip;
+}
+.subscribeBtn{
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #084d8c;
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+
+}
