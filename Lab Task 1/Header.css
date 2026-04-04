@@ -128,3 +128,84 @@
     justify-content: center;
     padding-right: 11px;
 }
+
+/*=====================Mobile  NAV======================*/
+#MobileLogoBar{
+    display: none;
+    padding: 0px 2% 10px 2%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+#MobileLogoBar img{
+    height: 30px;
+    width: 100px;
+    justify-content: flex-start;       
+}
+#MobileLogoBar p{
+    color: #084d8c;
+    font-size: 12px;
+    font-weight: 700;
+    margin: 0;
+    flex: 1;
+}
+#MobileLogoBar button{
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    background-color: #084d8c;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 5px;
+}
+#MobileNav{
+    display: none;
+    position: sticky;
+}
+#MobileNavLocation{
+    background-color: #084d8c;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 20px;
+    gap: 5px;
+}
+#MobileNavLocation img{
+   width: 18px;
+   aspect-ratio: 1/1;
+}
+#MobileNavLocation p{
+    flex-grow: 1;
+}
+#MobileNavSearchbar{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+#MobileNavSearchbar img{
+    aspect-ratio: 1/1;
+    width: 40px;
+}
+#MobileNavSearchbar div{
+    flex-grow: 1; 
+}
+
+
+@media screen and (max-width:786px) {
+    #head{
+        display:none;
+    }
+    #MobileLogoBar{
+        display:flex;
+    }
+    #MobileNav{
+        display: flex;
+        flex-direction: column;
+    }
+}
