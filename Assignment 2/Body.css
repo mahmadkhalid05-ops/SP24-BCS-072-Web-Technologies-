@@ -1,3 +1,109 @@
+#body{
+    margin-left: 0;
+    margin-right: 0;
+}
+/*================Opened Menu================*/
+#OpenedMenu{
+    position: fixed;
+    background-color: #fff;
+    z-index: 1000;
+    left: 8%;
+    border: 1px solid #e9e9e9;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 2);
+    height: 86vh;
+    width: 45vw;
+    padding: 0;
+    margin: 0 auto;
+    display: none;
+    max-width: 1600px;
+
+}
+#OpenedMenu.active{
+    display: flex;
+}
+#MenuLeft{
+    display:flex;
+    flex-direction: column;
+    width: 28%;
+    overflow-y: auto;
+    overflow-x:hidden;
+    background-color: #e5f5df;
+}
+#grocery,#electronics{
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    color:#56b730;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 2);
+    font-weight: 700;
+}
+
+.MenuGroceryDiv , .MenuElectronicsDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+
+}
+.MenuGroceryDiv img, .MenuElectronicsDiv img {
+    width: 32px;
+    aspect-ratio: 1/1;
+    padding-left: 10px;
+    padding-right: 5px;
+}
+.MenuGroceryDiv p, .MenuElectronicsDiv p {
+    font-size: 16px;
+    line-height: 25px;
+    padding: 5px 0;
+    padding-right: 10px;
+    margin: 0;
+}
+.GreenleftBorder, .BlueleftBorder{
+    display: none;
+    position: sticky;
+    left: 0;
+    width: 5px;
+    z-index: 200;
+    border-radius: 0 20px 20px 0;
+    height: 30px;
+    transition: top 0.3sec ease;
+}
+.GreenleftBorder{
+    background: rgb(86, 183, 48);
+}
+.BlueleftBorder{
+    background: #084d8c;
+}
+.MenuGroceryDiv:hover {
+    background-color: #fff;
+}
+
+.MenuGroceryDiv:hover .GreenleftBorder {
+    display: block;
+}
+
+.MenuElectronicsDiv:hover {
+    background-color: #fff;
+}
+
+.MenuElectronicsDiv:hover .BlueleftBorder {
+    display: block;
+}
+
+
+#MenuRight{
+    width: 70%;
+    padding: 0;
+    margin: 0;
+}
+#MenuRightGrid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    padding: 20px;
+    column-gap: 5px;
+    margin: 0;
+}
 /*================Banner or Carousel================*/
 #banner {
     cursor:pointer;
@@ -439,12 +545,43 @@
 
 }
 /*================Mobile Nav Bottom================*/
+#NavBottom{
+    display: none;
+    background-color: #edf6ff;
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 3px 0px 3px 0px;
+    margin: 0 auto;
+    
+}
 #NavBottomUl{
     display: flex;
+    justify-content: space-between;
     list-style: none;
+    margin: 0;
+    text-align: center;
+    padding: 0;
 }
+.NavBottomLi{
+    flex-grow: 1;
+}
+
 .NavBottomLi img{
     height: 35px;
     aspect-ratio: 1/1;
+}
+.NavBottomLi p{
+    margin: 0;
+    font-size: 10px;
+    color: #333;
+    padding: 0;
+}
+@media screen and (max-width:786px) {
+    #NavBottom{
+        display: block;
+    }
     
 }
