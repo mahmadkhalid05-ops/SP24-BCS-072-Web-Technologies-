@@ -1,7 +1,3 @@
-#body{
-    margin-left: 0;
-    margin-right: 0;
-}
 /*================Banner or Carousel================*/
 #banner {
     cursor:pointer;
@@ -443,43 +439,12 @@
 
 }
 /*================Mobile Nav Bottom================*/
-#NavBottom{
-    display: none;
-    background-color: #edf6ff;
-    z-index: 1000;
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 3px 0px 3px 0px;
-    margin: 0 auto;
-    
-}
 #NavBottomUl{
     display: flex;
-    justify-content: space-between;
     list-style: none;
-    margin: 0;
-    text-align: center;
-    padding: 0;
 }
-.NavBottomLi{
-    flex-grow: 1;
-}
-
 .NavBottomLi img{
     height: 35px;
     aspect-ratio: 1/1;
-}
-.NavBottomLi p{
-    margin: 0;
-    font-size: 10px;
-    color: #333;
-    padding: 0;
-}
-@media screen and (max-width:786px) {
-    #NavBottom{
-        display: block;
-    }
     
 }
