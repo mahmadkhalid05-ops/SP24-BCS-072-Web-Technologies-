@@ -35,7 +35,7 @@
     text-align: center;
     margin: 0;
     color:#56b730;
-    box-shadow: 0 1px 10px rgba(0, 0, 0, 2);
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
     font-weight: 700;
 }
 
@@ -97,13 +97,40 @@
     padding: 0;
     margin: 0;
 }
-#MenuRightGrid{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    padding: 20px;
+
+.rightGroup {
+    display: none;
+     grid-template-columns: repeat(2,1fr);
     column-gap: 5px;
-    margin: 0;
+    padding: 20px;
 }
+
+.rightGroup.show {
+    display: grid;
+   
+}
+.GreenRight p, .BlueRight p{
+    font-size: 18px;
+    text-align: left;
+    cursor: pointer;
+    padding: 0;
+    margin: 10px 0;
+}
+.GreenRight p:first-child, .BlueRight p:first-child{
+    font-weight:700;
+    font-size: 22px;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-align: left;
+    cursor: pointer;
+}
+.GreenRight p:first-child{
+    color: rgb(86, 183, 48);
+}
+.BlueRight p:first-child{
+    color: #084d8c;
+}
+
 /*================Banner or Carousel================*/
 #banner {
     cursor:pointer;
@@ -115,7 +142,6 @@
     overflow: hidden;
 }
 
-/* All images stacked */
 .slide {
     position: absolute;
     width: 100%;
@@ -125,12 +151,11 @@
     transition: opacity 1s ease-in-out;
 }
 
-/* Visible one */
 .slide.active {
     opacity: 1;
 }
 
-/* DOT CONTAINER */
+
 .dots {
     position: absolute;
     bottom: 15px;
@@ -140,7 +165,7 @@
     gap: 8px;
 }
 
-/* EACH DOT */
+
 .dot {
     width: 10px;
     height: 10px;
@@ -150,7 +175,7 @@
     transition: all 0.3s ease;
 }
 
-/* ACTIVE DOT */
+
 .dot.active {
     background: white;
     border-color: white;
@@ -226,7 +251,7 @@
     gap: 25px;
 }
 .advertisement{
-    grid-row: span 2;   /* takes 2 rows */
+    grid-row: span 2;   
     grid-column: span 1;
     border-radius: 20px;
     overflow: hidden;
@@ -272,7 +297,7 @@
 }
 .productPic{
     max-height: 140px;
-    aspect-ratio: 1/1;   /* 🔥 fixed image box */
+    aspect-ratio: 1/1;   
     display: flex;
     justify-content: center;
     position: relative;
@@ -530,6 +555,11 @@
     transition: border-color .3s ease;
     overflow: clip;
 }
+.email:focus {
+    border-color: yellow;
+    outline: none; /* removes default blue outline */
+}
+
 .subscribeBtn{
     font-size: 15px;
     font-weight: 400;
@@ -572,12 +602,14 @@
 .NavBottomLi img{
     height: 35px;
     aspect-ratio: 1/1;
+    cursor: pointer;
 }
 .NavBottomLi p{
     margin: 0;
     font-size: 10px;
     color: #333;
     padding: 0;
+    cursor: pointer;
 }
 @media screen and (max-width:786px) {
     #NavBottom{
