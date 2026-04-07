@@ -633,6 +633,13 @@
         </div>    
     </Section>
 
+    <section class="featured-deals">
+        <h2>Featured Deals</h2>
+        <div id="featured-container" class="product-grid">
+            <!-- Products will come here dynamically -->
+        </div>
+    </section>
+
     <Section id ="dowmloadLinks">
         <p>For <strong>Better Services</strong> Download Now</p>
         <div id="downloadLinksImg">
@@ -2931,7 +2938,18 @@
         </ul>
 
     </div>
+    <div id="featuredModal" class="modal">
+    <div class="modal-content">
+        <span id="closeModal">&times;</span>
+        <h2 id="fTitle"></h2>
+        <p id="fDesc"></p>
+        <p id="fRating"></p>
+    </div>
+</div>
     <script src="SideMenu.js"></script>
     <script src="Banner.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Featured Deals.js"></script>
 </body>
+
 </html>
