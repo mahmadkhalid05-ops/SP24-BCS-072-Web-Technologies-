@@ -10,6 +10,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Static folder
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public/Body/item/Section1')));
 
 // Route
 app.get('/', (req, res) => {
