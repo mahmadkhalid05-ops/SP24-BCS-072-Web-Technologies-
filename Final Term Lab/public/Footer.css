@@ -1,0 +1,119 @@
+#footerLinks{
+    background-color: #fefddb;
+    border-top: 5px solid #084d8c;
+}
+#footerLinksGrid{
+    max-width: 1600px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 35px 87px;
+    margin: 0 auto;
+}
+.footerHeading{
+    color: #084d8c;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    display: inline-block;   
+
+}
+
+.footerList p{
+    display: flex;
+    flex-direction: column;
+    color: #084d8c;
+    margin: 0 0 15px;
+}
+.MyAccountList{
+    display: flex;
+    align-content: center;
+    gap: 15px;
+}
+.MyAccountList img{
+    height: 21px;
+    aspect-ratio: 1/1;
+}
+.footerHr{
+    border: 1px solid #084d8c; 
+    width: 50px; 
+    margin:0;
+    padding: 0;
+    transform: translateY(-11px);
+}
+.ContactUsList{
+    display: flex;
+    flex-direction: column;
+}
+.ContactUsList p{
+    margin-top: 0;
+}
+.socialMedia img{
+    height: 23px;
+    aspect-ratio: 1/1;
+    margin-right: 13px;
+
+}
+#footerbottom{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+    margin: auto;
+    background-color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+#footerbottom img{
+    height: 40px;
+}
+#footerbottomHr{
+    color: #084d8c;
+    border: 1px solid #084d8c;
+    width: 100%;
+    padding: 0;
+    margin-top: 10px;
+}
+#copyright{
+    display: flex;
+    padding: 15px 87px;
+    font-size: 18px;
+    max-width: 1600px;   
+    align-items: center;  
+    margin-top: 0; 
+    padding-top: 0;
+    
+}
+#copyright p:first-child{
+    margin: 0 auto;
+    font-weight: 400;
+    color: #084d8c;
+    line-height: 20px;
+    text-align: center;
+    margin-right: 2px;
+
+}
+#copyright p:last-child{
+    font-weight: 700;
+    color: #30aee4;
+    margin-left: 0;
+    margin-right: auto;
+}
+#seo{
+    text-align: center;
+    width: calc(100%-10%);
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0;
+}
+#seo h1,h2{
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0 0 10px;
+    text-decoration: underline;
+}
+#seo p{
+    font-size: 16px;
+    font-weight: 400;  
+    margin-top: 0;  
+}
