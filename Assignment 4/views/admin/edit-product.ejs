@@ -1,0 +1,18 @@
+<h1>Edit Product</h1>
+
+<form action="/admin/edit/<%= product._id %>" method="POST" enctype="multipart/form-data">
+
+<input type="text" name="name" value="<%= product.name %>"><br>
+<input type="number" name="price" value="<%= product.price %>"><br>
+<input type="number" name="stock" value="<%= product.stock %>"><br>
+<input type="text" name="category" value="<%= product.category %>"><br>
+<textarea name="description"><%= product.description %></textarea><br>
+
+<p>Current Image:</p>
+<img src="/uploads/<%= product.image %>" width="80"><br>
+
+<input type="file" name="image"><br>
+
+<button type="submit">Update</button>
+
+</form>
