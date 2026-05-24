@@ -617,3 +617,24 @@
     }
     
 }
+
+/*================Go To Products Page Section================*/
+#Go-To-Products-Page-Section{
+    display: flex;
+    max-width: 1600px;
+    margin:auto;
+    justify-content: center;
+}
+#Go-To-Products-Page{
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #084d8c;
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    padding: 0;
+    cursor: pointer;
+}

@@ -2,75 +2,91 @@
 <html>
 <head>
     <title>Products</title>
+
+    <link rel="stylesheet" href="/CSS/products.css">
 </head>
+
 <body>
+
+    <h1>Dynamic Product Catalogue</h1>
+
     <form method="GET" action="/products">
 
-    <input type="text" name="search" placeholder="Search products"
-        value="<%= search %>">
+        <input type="text" name="search" placeholder="Search products"
+            value="<%= search %>">
 
-    <select name="category">
-        <option value="">All Categories</option>
-        <option value="Electronics">Electronics</option>
-        <option value="Fashion">Fashion</option>
-        <option value="Grocery">Grocery</option>
-    </select>
+        <select name="category">
+            <option value="">All Categories</option>
+            <option value="Electronics">Electronics</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Grocery">Grocery</option>
+        </select>
 
-    <input type="number" name="minPrice" placeholder="Min Price"
-        value="<%= minPrice %>">
+        <input type="number" name="minPrice" placeholder="Min Price"
+            value="<%= minPrice %>">
 
-    <input type="number" name="maxPrice" placeholder="Max Price"
-        value="<%= maxPrice %>">
+        <input type="number" name="maxPrice" placeholder="Max Price"
+            value="<%= maxPrice %>">
 
-    <button type="submit">Filter</button>
+        <button type="submit">Filter</button>
 
-</form>
+    </form>
 
-<div>
+    <div class="products-container">
 
-    <% products.forEach(product => { %>
+        <% products.forEach(product => { %>
 
-        <div style="border:1px solid #ccc; margin:10px; padding:10px;">
+            <div class="product-card">
 
-            <img src="<%= product.image %>" width="150">
+                <img src="<%= product.image %>">
 
-            <h3><%= product.name %></h3>
+                <div class="product-info">
 
-            <p>Price: <%= product.price %></p>
+                    <h3><%= product.name %></h3>
 
-            <p>Category: <%= product.category %></p>
+                    <p><strong>Price:</strong> $<%= product.price %></p>
 
-            <p>Rating: <%= product.rating %></p>
+                    <p><strong>Category:</strong> <%= product.category %></p>
 
-            <p>Stock: <%= product.stock %></p>
+                    <p><strong>Rating:</strong> <%= product.rating %></p>
 
-        </div>
+                    <p><strong>Stock:</strong> <%= product.stock %></p>
 
-    <% }) %>
+                </div>
 
-</div>
+            </div>
 
-<div>
+        <% }) %>
 
-    <% if(currentPage > 1) { %>
-        <a href="?page=<%= currentPage - 1 %>&search=<%= search %>&category=<%= category %>&minPrice=<%= minPrice %>&maxPrice=<%= maxPrice %>">
-            Previous
-        </a>
-    <% } %>
+    </div>
 
-    <% for(let i = 1; i <= totalPages; i++) { %>
-        <a href="?page=<%= i %>&search=<%= search %>&category=<%= category %>&minPrice=<%= minPrice %>&maxPrice=<%= maxPrice %>">
-            <%= i %>
-        </a>
-    <% } %>
+    <div class="pagination">
 
-    <% if(currentPage < totalPages) { %>
-        <a href="?page=<%= currentPage + 1 %>&search=<%= search %>&category=<%= category %>&minPrice=<%= minPrice %>&maxPrice=<%= maxPrice %>">
-            Next
-        </a>
-    <% } %>
+        <% if(currentPage > 1) { %>
 
-</div>
+            <a href="?page=<%= currentPage - 1 %>&search=<%= search %>&category=<%= category %>&minPrice=<%= minPrice %>&maxPrice=<%= maxPrice %>">
+                Previous
+            </a>
+
+        <% } %>
+
+        <% for(let i = 1; i <= totalPages; i++) { %>
+
+            <a href="?page=<%= i %>&search=<%= search %>&category=<%= category %>&minPrice=<%= minPrice %>&maxPrice=<%= maxPrice %>">
+                <%= i %>
+            </a>
+
+        <% } %>
+
+        <% if(currentPage < totalPages) { %>
+
+            <a href="?page=<%= currentPage + 1 %>&search=<%= search %>&category=<%= category %>&minPrice=<%= minPrice %>&maxPrice=<%= maxPrice %>">
+                Next
+            </a>
+
+        <% } %>
+
+    </div>
 
 </body>
 </html>

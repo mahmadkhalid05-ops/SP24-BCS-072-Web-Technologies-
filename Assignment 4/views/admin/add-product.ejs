@@ -1,15 +1,19 @@
 <h1>Add Product</h1>
 
-<form action="/admin/add" method="POST" enctype="multipart/form-data">
+<form class="admin-form" action="/admin/add" method="POST" enctype="multipart/form-data">
 
-<input type="text" name="name" placeholder="Name" required><br>
-<input type="number" name="price" placeholder="Price" required><br>
-<input type="number" name="stock" placeholder="Stock" required><br>
-<input type="text" name="category" placeholder="Category" required><br>
-<textarea name="description" placeholder="Description" required></textarea><br>
+    <input type="text" name="name" placeholder="Name" required>
 
-<input type="file" name="image" required><br>
+    <input type="number" name="price" placeholder="Price" required>
 
-<button type="submit">Add Product</button>
+    <input type="number" name="stock" placeholder="Stock" required>
+
+    <input type="text" name="category" placeholder="Category" required>
+
+    <textarea name="description" placeholder="Description" required></textarea>
+
+    <input type="file" name="image" required>
+
+    <button type="submit">Add Product</button>
 
 </form>

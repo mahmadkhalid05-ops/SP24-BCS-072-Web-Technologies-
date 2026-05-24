@@ -43,4 +43,9 @@ window.addEventListener("load", function () {
 
     });
 
+    //Go To Products Page Navigator
+    $("#Go-To-Products-Page").on("click", function () {
+        window.location.href = "/products";
+    });
+
 });
