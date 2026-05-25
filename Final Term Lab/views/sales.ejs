@@ -1,0 +1,107 @@
+<link rel="stylesheet" href="/CSS/admin.css">
+
+<div class="dashboard-container">
+
+    <h1 class="dashboard-title">
+        Sales Dashboard
+    </h1>
+
+    <div class="dashboard-cards">
+
+        <!-- REVENUE CARD -->
+        <div class="dashboard-card">
+
+            <h2>Total Revenue</h2>
+
+            <p id="revenue">
+                Rs. <%= totalRevenue %>
+            </p>
+
+        </div>
+
+        <!-- ORDERS CARD -->
+        <div class="dashboard-card">
+
+            <h2>Total Orders</h2>
+
+            <p id="orders">
+                <%= totalOrders %>
+            </p>
+
+        </div>
+
+        <!-- TOP PRODUCT -->
+        <div class="dashboard-card">
+
+            <h2>Top Selling Product</h2>
+
+            <p id="topProduct">
+
+                <% if(topProduct.length > 0) { %>
+
+                    Product ID:
+                    <%= topProduct[0]._id %>
+
+                    <br>
+
+                    Sold:
+                    <%= topProduct[0].totalSold %>
+
+                <% } else { %>
+
+                    No sales yet
+
+                <% } %>
+
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- JQUERY -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script>
+
+$(document).ready(function () {
+
+    function loadSalesData() {
+
+        $.getJSON("/api/sales-data", function (data) {
+
+            $("#revenue").text(
+                "Rs. " + data.totalRevenue
+            );
+
+            $("#orders").text(
+                data.totalOrders
+            );
+
+            if (data.topProduct.length > 0) {
+
+                $("#topProduct").html(
+                    "Product ID: " +
+                    data.topProduct[0]._id +
+                    "<br>Sold: " +
+                    data.topProduct[0].totalSold
+                );
+
+            } else {
+
+                $("#topProduct").text(
+                    "No sales yet"
+                );
+            }
+        });
+    }
+
+    // UPDATE EVERY 10 SECONDS
+    setInterval(loadSalesData, 10000);
+
+});
+
+</script>

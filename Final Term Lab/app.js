@@ -10,6 +10,7 @@ const path = require("path");
 const adminRoutes = require("./routes/admin");
 const productRoutes = require("./routes/products");
 const authRoutes = require("./routes/auth");
+const salesRoutes = require("./routes/sales");
 require("dotenv").config();
 const app = express();
 const PORT = 3000;
@@ -56,6 +57,8 @@ app.use(
     "/api/v1/user",
     require("./routes/api/v1/userApi")
 );
+
+app.use("/", salesRoutes);
 
 // ========================
 // SESSION (MUST BE BEFORE FLASH)
