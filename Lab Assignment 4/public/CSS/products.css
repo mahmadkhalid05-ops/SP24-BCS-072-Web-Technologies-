@@ -1,0 +1,118 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    font-family: Arial, sans-serif;
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    color: #084d8c;
+    margin-bottom: 30px;
+}
+
+/* Filter Form */
+form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+form input,
+form select {
+    padding: 10px;
+    border: 2px solid #084d8c;
+    border-radius: 6px;
+    outline: none;
+    font-size: 14px;
+    background-color: white;
+    color: black;
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #084d8c;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: black;
+}
+
+/* Products Grid */
+.products-container {
+    display: grid;
+    max-width: 1600px;
+    margin:0 auto;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+/* Product Card */
+.product-card {
+    border: 2px solid #084d8c;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    transition: 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Product Image */
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid #084d8c;
+}
+
+/* Product Details */
+.product-info {
+    padding: 15px;
+}
+
+.product-info h3 {
+    color: #084d8c;
+    margin-top: 0;
+}
+
+.product-info p {
+    margin: 8px 0;
+}
+
+/* Pagination */
+.pagination {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.pagination a {
+    display: inline-block;
+    margin: 5px;
+    padding: 10px 15px;
+    text-decoration: none;
+    border: 2px solid #084d8c;
+    color: #084d8c;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #084d8c;
+    color: white;
+}
