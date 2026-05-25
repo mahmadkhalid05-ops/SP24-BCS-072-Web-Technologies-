@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/mahmadkhalid05-ops/SP24-BCS-072-Web-Technologies-#readme",
   "dependencies": {
+    "connect-mongo": "^5.1.0",
     "ejs": "^5.0.2",
     "express": "^5.2.1"
   }

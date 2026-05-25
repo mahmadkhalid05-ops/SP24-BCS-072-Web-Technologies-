@@ -1,0 +1,172 @@
+/* ===== GLOBAL ===== */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: black;
+}
+
+/* ===== LAYOUT ===== */
+
+.sidebar {
+    position: fixed;
+    width: 240px;
+    height: 100vh;
+    background-color: #084d8c;
+    padding-top: 20px;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px 25px;
+    transition: 0.3s;
+    font-size: 16px;
+}
+
+.sidebar a:hover {
+    background-color: black;
+}
+
+.content {
+    margin-left: 240px;
+    padding: 30px;
+}
+
+/* ===== HEADINGS ===== */
+
+h1 {
+    color: #084d8c;
+    margin-bottom: 25px;
+}
+
+/* ===== FORMS ===== */
+
+form {
+    background-color: white;
+    border: 2px solid #084d8c;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+input,
+textarea,
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    margin-bottom: 18px;
+    border-radius: 6px;
+    border: 2px solid #084d8c;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+button {
+    background-color: #084d8c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: black;
+}
+
+/* ===== TABLE ===== */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+}
+
+table th {
+    background-color: #084d8c;
+    color: white;
+    padding: 14px;
+}
+
+table td {
+    border: 1px solid #084d8c;
+    padding: 12px;
+    text-align: center;
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* ===== IMAGES ===== */
+
+img {
+    border-radius: 6px;
+    border: 0px solid #084d8c;
+}
+
+/* ===== ACTION LINKS ===== */
+
+td a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    margin: 3px;
+    display: inline-block;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+td a:first-child {
+    background-color: #084d8c;
+    color: white;
+}
+
+td a:last-child {
+    background-color: black;
+    color: white;
+}
+
+td a:hover {
+    opacity: 0.8;
+}
+
+
+/* Extra Classes */
+
+.admin-form {
+    max-width: 500px;
+}
+
+.products-table {
+    margin-top: 20px;
+}
+
+.product-image {
+    border-radius: 6px;
+}
+
+.edit-btn {
+    background-color: #084d8c;
+    color: white;
+}
+
+.delete-btn {
+    background-color: black;
+    color: white;
+}

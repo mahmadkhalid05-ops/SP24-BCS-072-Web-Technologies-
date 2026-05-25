@@ -4,11 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="Header.css">
-    <link rel="stylesheet" href="Body.css">
-    <link rel="stylesheet" href="Footer.css">
+    <link rel="stylesheet" href="CSS/Header.css">
+    <link rel="stylesheet" href="CSS/Body.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
 </head>
 <body id="body">
+    <% if(success_msg.length > 0) { %>
+
+    <p><%= success_msg %></p>
+
+<% } %>
+
+
+
+<% if(error_msg.length > 0) { %>
+
+    <p><%= error_msg %></p>
+
+<% } %>
     <div id="MobileLogoBar">
         <img src="/Header/Logo/metro.png" alt="merto online">
         <p>Download Or App Now</p>
@@ -50,6 +63,19 @@
                     <img src="/Header/Cart/cart-outline.png" alt="cart">
                 </div>
             </div>
+            <% if(!currentUser) { %>
+
+            <a href="/login">Login</a>
+
+            <a href="/register">Register</a>
+
+        <% } else { %>
+
+            <p>Welcome <%= currentUser.name %></p>
+
+            <a href="/logout">Logout</a>
+
+        <% } %>
         </nav>
         <nav id="MobileNav">
             <div id="MobileNavLocation">
@@ -642,6 +668,16 @@
         </div>    
     </Section>
     
+    <section id="Go-To-Products-Page-Section">
+        <button id="Go-To-Products-Page">
+            Go to Produts Page
+        </button>
+        <a href="/admin">
+        <button id="Go-To-Admin-Dashboard">Go to Admin Dashboard</button>
+        </a>
+    </section>
+    
+
     <Section class ="items">
         <div class="itemsGrid">
             <div class="advertisement">
@@ -2933,5 +2969,7 @@
     </div>
     <script src="/SideMenu.js"></script>
     <script src="/Banner.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 </html>
